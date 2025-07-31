@@ -1,53 +1,80 @@
-## Heart Disease Prediction using Machine Learning -IET Lucknow
+# Plant Leaf Disease Prediction 
 
-Steps to Implement the Plant Leaf Disease Prediction Project
-	Mount the google drive on Google Collab Notebook and import the data set
-	Import the required libraries
-	Visualizing the images and Resize images
-	Convert the images into a NumPy array and normalize them.
-	Visualize the class count and Check for class imbalance
-	Splitting the dataset into the train, validate, and test sets
-	Performing one-hot encoding on the target variable
-	Creating the model architecture, compiling the model, and then fitting it using the training data
-	Plot the accuracy and loss against each epoch
-	Make predictions on testing data
-	Visualizing the original and predicted labels for the test images
-	Deploy the project using Streamlit
+A machine learning pipeline to detect plant leaf diseases using CNNs, trained in Google Colab and deployed via Streamlit.
 
-Steps to Execute the Project
-	To generate Model
-	Extract the contents of the zip folder.
-	Create a Projects folder in your Google Drive. Within that create a folder named Plant-Leaf-Disease-Prediction
+---
 
-	Upload Plant_Leaf_Disease_Prediction.ipynb and Dataset folder into	 Plant-Leaf-Disease-Prediction on your Google account
+## 🚀 Features
+- Preprocess & visualize leaf images
+- Data normalization, one‑hot encode & class imbalance checks
+- Train/validation/test split
+- Build, compile & train CNN; plot accuracy and loss
+- Make predictions & visualize results
+- Deploy interactive app with **Streamlit**
 
-	Open Plant_Leaf_Disease_Prediction.ipynb in Google Colab.
+---
 
-	Run Plant_Leaf_Disease_Prediction.ipynb  to generate the model. The Model plant_disease_model.h5 will be saved in Model Folder on your Google account.
+## 📁 Project Structure
+/
+├── Plant_Leaf_Disease_Prediction.ipynb
+├── dataset/
+├── plant_disease_model.h5
+└── main_app.py
 
-To Run Streamlit Application.
-	Download the plant_disease_model.h5 from your google account.
+markdown
+Copy
+Edit
 
-	Place the plant_disease_model.h5 and main_app.py into a folder in your machine.
+---
 
-	Install Anaconda Python Package
+## ⚙️ Getting Started
 
-	Open the anaconda prompt in the current working directory.
+### 1. Generate the Model
+1. Extract zipped contents into a `Plant‑Leaf‑Disease‑Prediction` folder in Google Drive  
+2. Upload notebook and dataset into that folder  
+3. Open `Plant_Leaf_Disease_Prediction.ipynb` in Google Colab and run end-to-end  
+4. `plant_disease_model.h5` is saved under `Model/` in your Drive
 
-The following commands to generate the requirements.txt file
+### 2. Run the Streamlit App
+1. Download `plant_disease_model.h5` to your local machine  
+2. Place it alongside `main_app.py` in one folder  
+3. Install dependencies:
+   ```bash
+   pip install pipreqs
+   pipreqs .
+   pip install -r requirements.txt
+Launch the app:
 
-	pip install pipreqs
+bash
+Copy
+Edit
+streamlit run main_app.py
+🧠 How It Works
+Mount Drive and load image dataset
 
-	pipreqs
+Resize and normalize images into NumPy arrays
 
-Run the following command to install the required libraries.
+Visualize and inspect class imbalance
 
-	pip install -r requirements.txt
+One‑hot encode labels and split into train, validation, and test sets
 
-	Finally, run the following command to run the Streamlit application.
+Define CNN architecture, compile, and train model
 
-	streamlit run main_app.py
+Visualize learning curves: accuracy and loss per epoch
 
-Happy Learning
+Predict on test data and display results using labels visualization
 
-Team VTUPulse.com
+Serve model via interactive Streamlit interface
+
+🎯 Motivation
+Enables accessible, end-to-end plant disease detection—from raw images to inference—ideal for educational and real-world IoT/field use.
+
+🧰 Tech Stack
+Python (NumPy, pandas)
+
+TensorFlow / Keras
+
+Matplotlib / Seaborn for visualization
+
+Streamlit for deployment
+
