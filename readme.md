@@ -21,11 +21,6 @@ A machine learning pipeline to detect plant leaf diseases using CNNs, trained in
 ├── plant_disease_model.h5
 └── main_app.py
 
-markdown
-Copy
-Edit
-
----
 
 ## ⚙️ Getting Started
 
@@ -45,9 +40,6 @@ Edit
    pip install -r requirements.txt
 Launch the app:
 
-bash
-Copy
-Edit
 streamlit run main_app.py
 🧠 How It Works
 Mount Drive and load image dataset
